@@ -3,6 +3,7 @@ package net.taobits.dicerolling
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
@@ -10,6 +11,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val rollButton = findViewById<Button>(R.id.roll_button)
-        rollButton.text = "Let's roll"
+        rollButton.setOnClickListener {
+            Toast.makeText(this, "button click", Toast.LENGTH_SHORT).show()
+        }
     }
 }
